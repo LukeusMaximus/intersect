@@ -7,8 +7,8 @@ type EquationOfMotion struct {
 	m float64 // gradient of the line - equivalent to velocity along the axis
 }
 
-func (equation *EquationOfMotion) AlterVelocity(Δ float64) { // UNICODE! (It's a capital delta character)
-	equation.m += Δ
+func (equation *EquationOfMotion) AlterVelocity(changeInVelocity float64) {
+	equation.m += changeInVelocity
 }
 
 func (equation *EquationOfMotion) GetPositionAtTime(t float64) float64 {
